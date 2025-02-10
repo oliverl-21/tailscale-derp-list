@@ -21,6 +21,7 @@ jobs:
     - name: Update Lists
       run: |
           curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].IPv4' > ip4
+          curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].IPv6' > ip6
 
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
