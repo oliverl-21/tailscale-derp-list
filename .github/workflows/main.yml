@@ -1,9 +1,9 @@
 name: Update
 
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: "15 */2 * * *"
 
 jobs:
   list-update:
