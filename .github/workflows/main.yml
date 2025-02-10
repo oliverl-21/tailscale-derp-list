@@ -20,9 +20,9 @@ jobs:
 
     - name: Update Lists
       run: |
-          curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].IPv4' > lists/ip4
-          curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].IPv6' > lists/ip6
-          curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].HostName' > lists/hosts
+          curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].IPv4' > feed/ipv4
+          curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].IPv6' > feed/ipv6
+          curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].HostName' > feed/hosts
 
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
