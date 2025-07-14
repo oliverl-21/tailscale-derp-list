@@ -10,7 +10,7 @@ on:
 
 jobs:
   list-update:
-    runs-on: ubuntu-latest-arm
+    runs-on: ubuntu-24.04-arm
 
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
