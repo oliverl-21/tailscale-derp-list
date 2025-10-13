@@ -27,6 +27,6 @@ jobs:
           curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].IPv6' > feed/ipv6
           curl https://login.tailscale.com/derpmap/default | jq -r '.Regions[].Nodes[].HostName' > feed/hosts
 
-    - uses: stefanzweifel/git-auto-commit-action@v6
+    - uses: stefanzweifel/git-auto-commit-action@v7
       with:
         commit_message: Update Feed
